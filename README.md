@@ -228,21 +228,3 @@ MIT License.
 ## ⭐ Acknowledgements
 
 World Bank, IMF Data Portal, UN Comtrade, Freightos FBX, and the open-source ML community.
-
-```
-
----
-
-如需的话，我还能帮你写：
-
-- `.gitignore`
-- `requirements.txt`
-- `.env.example`
-- `docs/roadmap.md`
-
-要一起做吗？
-```
-
-
-
-

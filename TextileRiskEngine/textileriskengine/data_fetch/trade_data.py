@@ -1,6 +1,13 @@
 import requests
 import pandas as pd
+from pathlib import Path
 import time
+
+# 当前文件：TextileRiskEngine/textileriskengine/data_fetch/xxx.py
+PROJECT_ROOT = Path(__file__).resolve().parents[2]   # 回到 TextileRiskEngine/
+RAW_DIR = PROJECT_ROOT / "data" / "raw"
+RAW_DIR.mkdir(parents=True, exist_ok=True)
+
 
 COMTRADE_URL = (
     "https://comtradeapi.un.org/public/v1/preview/"
@@ -44,7 +51,7 @@ def run():
         time.sleep(1)
 
     final = pd.concat(all_df, ignore_index=True)
-    final.to_csv("data/raw/trade_data.csv", index=False)
+    final.to_csv(RAW_DIR / "trade_data.csv", index=False)
     print("Trade data saved → data/raw/trade_data.csv")
 
 if __name__ == "__main__":

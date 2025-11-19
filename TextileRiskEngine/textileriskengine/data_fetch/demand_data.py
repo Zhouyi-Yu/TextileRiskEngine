@@ -1,5 +1,11 @@
 import requests
+from pathlib import Path
 import pandas as pd
+
+# 当前文件：TextileRiskEngine/textileriskengine/data_fetch/xxx.py
+PROJECT_ROOT = Path(__file__).resolve().parents[2]   # 回到 TextileRiskEngine/
+RAW_DIR = PROJECT_ROOT / "data" / "raw"
+RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 SEARCH_TERMS = ["t shirt", "cotton shirt", "cotton fabric", "poly cotton"]
 
@@ -45,7 +51,7 @@ def run():
 
     if rows:
         final = pd.concat(rows, ignore_index=True)
-        final.to_csv("data/raw/demand_data.csv", index=False)
+        final.to_csv(RAW_DIR / "fx_data.csv", index=False)
         print("Saved → data/raw/demand_data.csv")
 
 if __name__ == "__main__":
