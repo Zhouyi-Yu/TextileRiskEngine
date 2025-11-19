@@ -1,10 +1,4 @@
 # TextileRiskEngine
-明白，你需要 **一整个 README.md，一次复制即可**，没有分段、没有多余解释、没有中断。
-下面是 **完整可直接复制** 的版本（已经优化过格式与呈现）。
-
----
-
-# ✅ **可直接复制的 README.md（完整版）**
 
 ```markdown
 # GlobalTextileAnalytics
